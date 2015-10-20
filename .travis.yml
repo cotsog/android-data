@@ -7,9 +7,9 @@ before_install:
   - tar -zxf android-sdk_r20.0.3-linux.tgz
   - export ANDROID_HOME=`pwd`/android-sdk-linux
   - export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
-  - android update sdk --no-ui --filter android-15,extra-android-support,platform-tools,system-image
+  - android update sdk --no-ui --filter android-23,extra-android-support,platform-tools,system-image
   - android list targets
-  - echo no | android create avd -n emulator -t android-15 --skin WVGA800 --abi x86 --force
+  - echo no | android create avd -n emulator -t android-23 --skin WVGA800 --abi x86 --force
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
